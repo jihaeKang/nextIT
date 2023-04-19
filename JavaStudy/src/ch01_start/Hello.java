@@ -3,6 +3,7 @@ package ch01_start;
 public class Hello {
 
 	public static void main(String[] args) {
+		// 헐헐
 		// TODO Auto-generated method stub
 		System.out.println("Hello World");
 		
