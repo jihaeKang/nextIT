@@ -3,6 +3,7 @@ package ch01_start;
 public class Hello {
 
 	public static void main(String[] args) {
+		// 사이트 수정 테스트
 		// 연동 테스트
 		// 헐헐
 		// TODO Auto-generated method stub
