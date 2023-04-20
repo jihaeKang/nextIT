@@ -26,7 +26,7 @@ public class DateBoardMain {
 			System.out.println(dbList.get(i));
 			}
 		
-		System.out.println("\n====================================\n");
+		System.out.println("\n==================3-1==================\n");
 
 		// TODO 코드작성 시작 ~!!
 		
@@ -49,7 +49,7 @@ public class DateBoardMain {
 			System.out.println(dbList.get(i));
 		}
 		
-		System.out.println("\n========================================\n");
+		System.out.println("\n===================3-2=====================\n");
 		
 		for(int k = 0; k < dbList.size()-1; k++) {
 			 for(int i = 0 ; i < dbList.size()-1; i++) {
@@ -68,15 +68,13 @@ public class DateBoardMain {
 			System.out.println(dbList.get(i));
 		}
 		
-		System.out.println("\n========================================\n");
+		System.out.println("\n====================4===================\n");
 		
 //		dbList에서 최근 한달 내(오늘기준 30일 전까지)로 작성된 게시글만 출력해주세요.
 		
 		Date toDay = new Date();
 		long toDayMill = toDay.getTime();
 		System.out.println(toDayMill);
-		
-		System.out.println("\n==\n");
 		
 		for(int i = 0; i < dbList.size(); i++) {
 			long date = sdf.parse(dbList.get(i).getDate()).getTime();
@@ -86,21 +84,70 @@ public class DateBoardMain {
 			}	
 		}
 		
-		System.out.println("\n======================================\n");
+		System.out.println("\n===================5===================\n");
 		
 //		dbList에서 이번달에 작성된 게시글만 출력해주세요. (이번달이라고 5를 쓰지 마시구.. 코드상으로 이번달을 얻어서 써야겠죠?)
 		
 		Calendar calendar = Calendar.getInstance();
 		
 		int thisMon = calendar.get(Calendar.MONTH)+1;
-		System.out.println(thisMon);
+		SimpleDateFormat monthFormat = new SimpleDateFormat("M");
+		int thisyear = calendar.get(Calendar.YEAR);
+		SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
+		
+		for(int i = 0; i < dbList.size(); i++) {
+			Date monParse = sdf.parse(dbList.get(i).getDate());
+			int month = Integer.parseInt(monthFormat.format(monParse));
+			Date yearParse = sdf.parse(dbList.get(i).getDate());
+			int year = Integer.parseInt(yearFormat.format(yearParse));
+			
+			if(thisMon == month && thisyear == year) {
+				System.out.println(dbList.get(i));
+			}
+		}
+		
+		System.out.println("\n====================6====================");
+		
+		int setMon = 2;
+		calendar.set(1, setMon-1, 1);
+		int feb = Integer.parseInt(monthFormat.format(calendar.getTime()));
 		
 		for(int i = 0; i < dbList.size(); i++) {
 			Date mon = sdf.parse(dbList.get(i).getDate());
-//			calendar.setTime(thisMon);
-			
-			
+			int month = Integer.parseInt(monthFormat.format(mon));
+			if(feb == month) {
+				System.out.println(dbList.get(i));
+			}
 		}
+		
+		System.out.println("\n====================7=====================\n");
+		
+//		2022년 2월 14일부터 2022년 3월 21일까지 작성된 게시글만 출력해주세요.
+		
+		String valentine = "2022.02.14";
+		String march = "2023.03.21";
+		SimpleDateFormat temp2 = new SimpleDateFormat("yyyy.MM.dd");
+		long valMill = temp2.parse(valentine).getTime();
+		long marMill = temp2.parse(march).getTime();
+		System.out.println(valMill);
+		System.out.println(marMill);
+		
+		for(int i = 0; i < dbList.size(); i++) {
+			long date = sdf.parse(dbList.get(i).getDate()).getTime();
+			
+			if(date >= valMill && date <= marMill) {
+				System.out.println(dbList.get(i));
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 
 
