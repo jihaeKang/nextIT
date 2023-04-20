@@ -1,58 +1,64 @@
 package jihae.submit12;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class BoardUnit {
-	private int no;
-	private String title;
-	private String date;
-	private String content;
+	private int noo;
+	private String titlee;
+	private String datee;
+	private String contentss; 
 	
 	public BoardUnit() {
 		
 	}
 	
-	public BoardUnit(int no, String title, String date, String content) {
+	public BoardUnit(int noo, String titlee, String datee, String contentss) {
 		super();
-		this.no = no;
-		this.title = title;
-		this.date = date;
-		this.content = content;
+		Date today = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+		String todayFormat = sdf.format(today);
+		this.noo = noo;
+		this.titlee = titlee;
+		this.datee = todayFormat;
+		this.contentss = contentss;
 	}
 
 	@Override
 	public String toString() {
-		return "BoardUnit [no=" + no + ", title=" + title + ", date=" + date + ", content=" + content + "]";
+		return "BoardUnit [noo=" + noo + ", titlee=" + titlee + ", datee=" + datee + ", contentss=" + contentss + "]";
 	}
 
-	public int getNo() {
-		return no;
+	public int getNoo() {
+		return noo;
 	}
 
-	public void setNo(int no) {
-		this.no = no;
+	public void setNoo(int noo) {
+		this.noo = noo;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getTitlee() {
+		return titlee;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setTitlee(String titlee) {
+		this.titlee = titlee;
 	}
 
-	public String getDate() {
-		return date;
+	public String getDatee() {
+		return datee;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setDatee(String datee) {
+		this.datee = datee;
 	}
 
-	public String getContent() {
-		return content;
+	public String getContentss() {
+		return contentss;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setContentss(String contentss) {
+		this.contentss = contentss;
 	}
 	
 	

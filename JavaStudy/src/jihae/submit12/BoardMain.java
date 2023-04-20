@@ -1,7 +1,11 @@
 package jihae.submit12;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
+
+import ch09_class.homepage.Board;
 
 public class BoardMain {
 
@@ -22,10 +26,15 @@ public class BoardMain {
 			}else if(choice == 2) {
 				System.out.print("글 제목을 입력해주세요: ");
 				String title = scan.nextLine();
-//				boardDB.makeContents(title);
 				System.out.print("글 내용을 입력해주세요: ");
 				String content = scan.nextLine();
-//				boardDB.makeContents(content);
+				
+				BoardUnit board = new BoardUnit(0, title, "", content);
+				boardDB.makeContents(board);
+				
+			}else {
+				System.out.println("종료합니다.");
+				break;
 			}
 		}
 		

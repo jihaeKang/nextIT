@@ -7,8 +7,8 @@ public class AudioBoard extends BoardUnit{
 		
 	}
 	
-	public AudioBoard(int no, String title, String date, String content, String audio) {
-		super(no, title, date, content);
+	public AudioBoard(int noo, String titlee, String datee, String contentss, String audio) {
+		super(noo, titlee, datee, contentss);
 		this.audio = audio;
 	}
 
@@ -16,8 +16,8 @@ public class AudioBoard extends BoardUnit{
 
 	@Override
 	public String toString() {
-		return "AudioBoard [getNo()=" + getNo() + ", getTitle()=" + getTitle() + ", getDate()="
-				+ getDate() + ", getContent()=" + getContent() + ", audio=" + audio + "]";
+		return "getNo()=" + getNoo() + ", getTitle()=" + getTitlee()
+		+ ", getDate()=" + getDatee() + ", getContent()=" + getContentss() + ", audio=" + audio + "]";
 	}
 
 	public String getAudio() {

@@ -8,16 +8,16 @@ public class CartoonBoard extends BoardUnit{
 	}
 	
 	
-	public CartoonBoard(int no, String title, String date, String content, String image) {
-		super(no, title, date, content);
+	public CartoonBoard(int noo, String titlee, String datee, String contentss, String image) {
+		super(noo, titlee, datee, contentss);
 		this.image = image;
 	}
 
 
 	@Override
 	public String toString() {
-		return "CartoonBoard [toString()=" + super.toString() + ", getNo()=" + getNo()
-				+ ", getTitle()=" + getTitle() + ", getDate()=" + getDate() + ", getContent()=" + getContent() + "image=" + image + "]";
+		return ", getNo()=" + getNoo() + ", getTitle()=" + getTitlee()
+		+ ", getDate()=" + getDatee() + ", getContent()=" + getContentss() + "image=" + image + "]";
 	}
 
 

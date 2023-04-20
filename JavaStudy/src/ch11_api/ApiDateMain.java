@@ -311,7 +311,7 @@ public class ApiDateMain {
 					break;
 				}
 			}
-			// i가 6 13 20 27 34 일때 출력 후 줄바
+			// i가 6 13 20 27 34 일때 출력 후 줄바 
 			if(i % 7 == 6) {
 				System.out.println();
 			}

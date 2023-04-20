@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import ch09_class.homepage.Board;
 
 public class BoardDB {
-	private ArrayList<Board> boardList = new ArrayList<>();
+	private ArrayList<BoardUnit> boardList = new ArrayList<>();
 	
 	private BoardDB() {
 	
@@ -19,12 +19,12 @@ public class BoardDB {
 	
 	public void showBoardList() {
 		for(int i = 0; i < boardList.size(); i++) {
-			System.out.println(boardList.get(i));
+			System.out.println(boardList.get(i).getNoo() + ". | " + boardList.get(i).getTitlee() + " | " + boardList.get(i).getDatee());
 		}
 	}
 	
-	public void makeContents(Board bd) {
-		bd.setNo(boardList.size()+1);
+	public void makeContents(BoardUnit bd) {
+		bd.setNoo(boardList.size()+1);
 		
 		boardList.add(bd);
 	}

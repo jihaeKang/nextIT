@@ -3,17 +3,17 @@ package jihae.submit12;
 public class Board extends BoardUnit{
 
 	public Board() {
-		super();
+	
 	}
 
-	public Board(int no, String title, String date, String content) {
-		super(no, title, date, content);
+	public Board(int noo, String titlee, String datee, String contentss) {
+		super(noo, titlee, datee, contentss);
 	}
 
 	@Override
 	public String toString() {
-		return  ", getNo()=" + getNo() + ", getTitle()=" + getTitle()
-				+ ", getDate()=" + getDate() + ", getContent()=" + getContent() + "]";
+		return  ", getNo()=" + getNoo() + ", getTitle()=" + getTitlee()
+				+ ", getDate()=" + getDatee() + ", getContent()=" + getContentss() + "]";
 	}
 	
 
