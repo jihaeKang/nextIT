@@ -16,8 +16,7 @@ public class CartoonBoard extends BoardUnit{
 
 	@Override
 	public String toString() {
-		return ", getNo()=" + getNoo() + ", getTitle()=" + getTitlee()
-		+ ", getDate()=" + getDatee() + ", getContent()=" + getContentss() + "image=" + image + "]";
+		return super.toString() + "[image=" + image + "]";
 	}
 
 
