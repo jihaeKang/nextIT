@@ -59,7 +59,7 @@ public class JdbcSelect {
 				// 쿼리문 실행 결과에 해당하는 컬럼명과 일치해야 한다.
 				String stuId = rs.getString("stu_id");
 				String stuPw = rs.getString("pw");
-				String stuName = rs.getString("stu_name");
+				String stuName  = rs.getString("stu_name");
 				int stuScore = rs.getInt("stu_score");
 				
 				System.out.println("아이디: " + stuId

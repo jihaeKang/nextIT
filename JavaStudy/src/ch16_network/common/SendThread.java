@@ -38,11 +38,23 @@ public class SendThread extends Thread{
 				String msg = scan.nextLine();
 				
 				// 채팅 종료
-				if(msg.equals("") || msg == null || msg.equals("나가기") || msg.equals("exit")) {
+				if(msg.contains("안녕")) {
 					
-					writer.println("대화가 종료되었습니다.");
+					writer.println(msg + "(^o^)/");
 					writer.flush();
 					
+				}
+				
+				if(msg.contains("ㅠㅠ")) {
+					
+					writer.println(msg + "(T_T)");
+					writer.flush();
+					
+				}
+				
+				if(msg.equals("") || msg == null || msg.equals("나가기") || msg.equals("exit")) {
+					writer.println("대화가 종료되었습니다.");
+					writer.flush();
 					break;
 				}
 				
